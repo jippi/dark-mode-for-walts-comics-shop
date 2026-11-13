@@ -21,6 +21,7 @@ Install the manager, then open [walts-dark.user.css](https://raw.githubuserconte
 | [FireMonkey](https://addons.mozilla.org/firefox/addon/firemonkey/) | Firefox |
 | [Userscripts](https://apps.apple.com/app/userscripts/id1463298887) | Safari on Mac, iPhone and iPad |
 | [AdGuard](https://adguard.com) desktop app | Any browser on Windows and Mac |
+| [Cascadea](https://apps.apple.com/app/cascadea/id1432182561) (paid) | Safari on Mac |
 
 ### Userscript managers
 
@@ -33,6 +34,7 @@ Install the manager, then open [walts-dark.user.js](https://raw.githubuserconten
 | [Greasemonkey](https://addons.mozilla.org/firefox/addon/greasemonkey/) | Firefox |
 | [ScriptCat](https://scriptcat.org) | Chrome and friends, Firefox |
 | [Userscripts](https://apps.apple.com/app/userscripts/id1463298887) | Safari on Mac, iPhone and iPad |
+| [Stay](https://apps.apple.com/app/stay-for-safari/id1591620171) | Safari on Mac, iPhone and iPad |
 
 In Chrome, userscript managers only run after you allow user scripts for them: `chrome://extensions` > the manager's "Details" > "Allow User Scripts".
 
