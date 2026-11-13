@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         Dark Mode for Walt's Comic Shop (unofficial)
 @namespace    github.com/jippi/dark-mode-for-walts-comics-shop
-@version      2.4.0
+@version      2.5.0
 @description  Unofficial dark theme for waltscomicshop.com. Collects no data.
 @author       Jippi (https://jippi.dev)
 @homepageURL  https://github.com/jippi/dark-mode-for-walts-comics-shop
@@ -156,6 +156,8 @@
   .rrp-bubble::after, .wcs-tip::after { border-top-color: var(--wd-surface-2) !important; }
   .rrp-bubble.below::after, .wcs-tip.below::after { border-bottom-color: var(--wd-surface-2) !important; border-top-color: transparent !important; }
   .single-issue-info-banner { background-color: var(--wd-surface) !important; }
+  /* Yellow pill keeps its background, so it needs dark text. */
+  .product-meta__restock-note { color: var(--wd-ink) !important; }
   .single-issue-info { color: #ff8a65 !important; }
   /* The theme's link hover uses --accent-color, which equals the heading colour here, so give hover its own colour. */
   .link:hover, .link:focus-visible { color: var(--wd-yellow) !important; }
@@ -583,6 +585,63 @@
   .swym-wishlist-grid .swym-add-to-cart-btn.swym-disabled { background: var(--wd-surface-3) !important; color: var(--wd-muted) !important; }
   .swym-ui-component .swym-wishlist-item, .swym-ui-component .swym-wishlist-grid li { background: var(--wd-surface) !important; border-color: var(--wd-border) !important; }
   .swym-ui-component .swym-modal-bg { background: rgba(0, 0, 0, 0.6) !important; }
+
+  /* Swym wishlist panel: tabs, list overview, list detail */
+  .swym-ui-component .swym-wishlist-container-content { background: var(--wd-bg) !important; color: var(--wd-text) !important; }
+  .swym-ui-component ul.swym-htc-tabs { border-color: var(--wd-border) !important; }
+  .swym-ui-component li.swym-htc-tab-item { background: var(--wd-surface) !important; color: var(--wd-muted) !important; }
+  .swym-ui-component li.swym-htc-tab-item:hover { color: var(--wd-heading) !important; }
+  .swym-ui-component li.swym-htc-tab-item.swym-selected { background: var(--wd-surface-3) !important; color: var(--wd-heading) !important; }
+  .swym-ui-component .swym-wishlist-list-card {
+    background: var(--wd-surface) !important;
+    box-shadow: inset 0 0 0 1px var(--wd-border) !important;
+  }
+  .swym-ui-component .swym-wishlist-list-card:hover { box-shadow: inset 0 0 0 1px var(--wd-border-strong) !important; }
+  .swym-ui-component .swym-wishlist-link-action { color: var(--wd-yellow) !important; border-color: var(--wd-border-strong) !important; }
+  .swym-ui-component .swym-wishlist-detail-separator,
+  .swym-ui-component .swym-product-title::after { background: var(--wd-border-strong) !important; }
+  .swym-ui-component .swym-share-btn, .swym-ui-component .swym-action-container button { border-color: var(--wd-border-strong) !important; }
+  .swym-ui-component .swym-product-final-price { color: var(--wd-heading) !important; }
+  .swym-ui-component .swym-has-sale .swym-product-final-price { color: var(--wd-sale) !important; }
+  .swym-ui-component .swym-product-original-price { color: var(--wd-muted) !important; }
+
+  .swym-ui-component .swym-label, .swym-ui-component .swym-wishlist-product-count { color: var(--wd-muted) !important; }
+  .swym-ui-component .swym-value, .swym-ui-component .swym-text, .swym-ui-component .swym-nav,
+  .swym-ui-component .swym-back-btn { color: var(--wd-text) !important; }
+  .swym-ui-component .swym-back-btn:hover { color: var(--wd-heading) !important; }
+
+  /* Swym "Saved for Later" tab */
+  .swym-ui-component .swym-wishlist-modal .swym-modal-content { background: var(--wd-bg) !important; }
+  .swym-ui-component .swym-sfl-tab-container { background: var(--wd-bg) !important; color: var(--wd-text) !important; }
+  .swym-ui-component .swym-sfl-title { color: var(--wd-heading) !important; }
+  .swym-ui-component .swym-sfl-list-empty-text, .swym-ui-component [class*="swym-sfl-"] p,
+  .swym-ui-component [class*="swym-sfl-product"] { color: var(--wd-text) !important; }
+  .swym-ui-component .swym-sfl-detail-separator { border-color: var(--wd-border-strong) !important; }
+  .swym-ui-component .swym-sfl-add-all-to-cart-btn {
+    background: var(--wd-yellow) !important;
+    border-color: var(--wd-yellow) !important;
+    color: var(--wd-ink) !important;
+  }
+  .swym-ui-component .swym-sfl-add-all-to-cart-btn.swym-disabled {
+    background: var(--wd-surface-3) !important;
+    border: 1px solid var(--wd-border-strong) !important;
+    color: var(--wd-muted) !important;
+  }
+
+  /* Swym "add to list" popup rows and the "added" toast */
+  .swym-ui-component .swym-add-wishlist-modal .swym-wishlist-item { background: var(--wd-surface-3) !important; }
+  .swym-ui-component .swym-add-wishlist-modal .swym-wishlist-item:hover,
+  .swym-ui-component .swym-add-wishlist-modal .swym-wishlist-item.swym-selected { box-shadow: inset 0 0 0 1px var(--wd-yellow) !important; }
+  .swym-ui-component .swym-add-wishlist-modal .swym-wishlist-item.swym-selected .swym-icon { color: var(--wd-yellow) !important; }
+  .swym-ui-component .swym-add-to-list-btn:disabled { opacity: 0.55 !important; }
+  .swym-notifications-container .swym-product-tile {
+    background: var(--wd-surface-2) !important;
+    color: var(--wd-text) !important;
+    box-shadow: var(--wd-shadow), inset 0 0 0 1px var(--wd-border-strong) !important;
+  }
+  .swym-notifications-container .swym-product-tile * { color: var(--wd-text) !important; }
+  .swym-notifications-container .swym-product-tile b, .swym-notifications-container .swym-product-tile strong { color: var(--wd-heading) !important; }
+  .swym-notifications-container .swym-notification-action { color: var(--wd-yellow) !important; }
 
   /* Misc */
   .article__toolbar-item svg, .article__toolbar-item svg * { stroke: var(--wd-text) !important; }
