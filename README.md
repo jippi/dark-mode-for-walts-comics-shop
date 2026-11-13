@@ -8,22 +8,21 @@ Not affiliated with or endorsed by Walt's Comic Shop.
 
 ## Install
 
-### Stylus (any browser, easiest)
+- **Chrome, Edge, Brave, Vivaldi, Arc:** [Chrome Web Store](https://chromewebstore.google.com/detail/dkblkanljfclibldicedkpgneogjnfhb)
+- **Firefox:** [Firefox Add-ons](https://addons.mozilla.org/firefox/addon/dark-mode-for-walts-comic-shop/)
+
+### Stylus (any browser)
 
 1. Install [Stylus](https://add0n.com/stylus.html).
 2. Open [walts-dark.user.css](https://raw.githubusercontent.com/jippi/dark-mode-for-walts-comics-shop/main/walts-dark.user.css) and click "Install style".
 
 Stylus picks up new versions by itself.
 
-### Chrome, Edge, Brave, Vivaldi, Arc
+### From source
 
 1. Download this repo (Code > Download ZIP) and unzip it.
 2. Open `chrome://extensions` and turn on "Developer mode".
 3. Click "Load unpacked" and pick the unzipped folder.
-
-### Firefox
-
-Use Stylus. Loading the folder through `about:debugging` works too, but Firefox removes it on restart.
 
 ## Turn it off
 
