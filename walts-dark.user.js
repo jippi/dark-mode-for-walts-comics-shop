@@ -3,6 +3,7 @@
 // @namespace    github.com/jippi/dark-mode-for-walts-comics-shop
 // @version      2.0.0
 // @description  Unofficial dark theme for waltscomicshop.com. Collects no data.
+// @author       Jippi (https://jippi.dev)
 // @match        *://*.waltscomicshop.com/*
 // @run-at       document-start
 // @grant        GM_addStyle

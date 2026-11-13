@@ -60,3 +60,7 @@ Edit `dark.css`, then run `./build.sh` (needs `python3` and `zip`). It writes:
 Bump `version` in `manifest.json` before a release, or the managers won't see an update.
 
 Something looks wrong on a page? Open an issue with the URL and a screenshot.
+
+---
+
+Made by [Jippi](https://jippi.dev).

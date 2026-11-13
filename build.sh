@@ -38,6 +38,7 @@ header = f"""/* ==UserStyle==
 @namespace    github.com/{repo}
 @version      {version}
 @description  {m["description"]}
+@author       Jippi (https://jippi.dev)
 @homepageURL  https://github.com/{repo}
 @updateURL    https://raw.githubusercontent.com/{repo}/main/walts-dark.user.css
 ==/UserStyle== */
@@ -52,6 +53,7 @@ js = f"""// ==UserScript==
 // @namespace    github.com/{repo}
 // @version      {version}
 // @description  {m["description"]}
+// @author       Jippi (https://jippi.dev)
 // @match        *://*.waltscomicshop.com/*
 // @run-at       document-start
 // @grant        GM_addStyle
