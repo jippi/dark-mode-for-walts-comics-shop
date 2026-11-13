@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         Dark Mode for Walt's Comic Shop (unofficial)
 @namespace    github.com/jippi/dark-mode-for-walts-comics-shop
-@version      2.0.0
+@version      2.1.0
 @description  Unofficial dark theme for waltscomicshop.com. Collects no data.
 @author       Jippi (https://jippi.dev)
 @homepageURL  https://github.com/jippi/dark-mode-for-walts-comics-shop
@@ -285,6 +285,8 @@
     background: var(--wd-surface) !important;
     border-color: var(--wd-border) !important;
   }
+  div.snize li.snize-product span.snize-overhidden, #snize-search-results-grid-mode li.snize-product span.snize-overhidden,
+  #snize-search-results-list-mode li.snize-product span.snize-overhidden { background: transparent !important; }
   div.snize div.snize-filters-dropdown-title, div.snize div.snize-main-panel-dropdown > a,
   div.snize div.snize-pagination ul li a, div.snize div.snize-pagination ul li span,
   div.snize div.snize-product-filters-block, div.snize input.snize-price-range-input,

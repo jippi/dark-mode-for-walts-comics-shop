@@ -274,6 +274,8 @@ div.snize li.snize-product, #snize-search-results-grid-mode li.snize-product, #s
   background: var(--wd-surface) !important;
   border-color: var(--wd-border) !important;
 }
+div.snize li.snize-product span.snize-overhidden, #snize-search-results-grid-mode li.snize-product span.snize-overhidden,
+#snize-search-results-list-mode li.snize-product span.snize-overhidden { background: transparent !important; }
 div.snize div.snize-filters-dropdown-title, div.snize div.snize-main-panel-dropdown > a,
 div.snize div.snize-pagination ul li a, div.snize div.snize-pagination ul li span,
 div.snize div.snize-product-filters-block, div.snize input.snize-price-range-input,
