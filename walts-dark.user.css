@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         Dark Mode for Walt's Comic Shop (unofficial)
 @namespace    github.com/jippi/dark-mode-for-walts-comics-shop
-@version      2.5.0
+@version      2.6.0
 @description  Unofficial dark theme for waltscomicshop.com. Collects no data.
 @author       Jippi (https://jippi.dev)
 @homepageURL  https://github.com/jippi/dark-mode-for-walts-comics-shop
@@ -597,7 +597,11 @@
     box-shadow: inset 0 0 0 1px var(--wd-border) !important;
   }
   .swym-ui-component .swym-wishlist-list-card:hover { box-shadow: inset 0 0 0 1px var(--wd-border-strong) !important; }
-  .swym-ui-component .swym-wishlist-link-action { color: var(--wd-yellow) !important; border-color: var(--wd-border-strong) !important; }
+  /* "View list" is plain text in the shop's design; an older button rule here gave it a border. */
+  .swym-ui-component .swym-wishlist-list-card .swym-wishlist-link.swym-wishlist-link-action { border: 0 !important; color: var(--wd-yellow) !important; }
+  /* The loading skeleton is a light image, so darken the image itself. */
+  .swym-ui-component .swym-empty-wishlist-list-container, .swym-ui-component .swym-empty-wishlist-detail,
+  .swym-ui-component [class*="swym-empty-sfl"] { filter: invert(0.88) hue-rotate(180deg) !important; }
   .swym-ui-component .swym-wishlist-detail-separator,
   .swym-ui-component .swym-product-title::after { background: var(--wd-border-strong) !important; }
   .swym-ui-component .swym-share-btn, .swym-ui-component .swym-action-container button { border-color: var(--wd-border-strong) !important; }

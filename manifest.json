@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Dark Mode for Walt's Comic Shop (unofficial)",
   "description": "Unofficial dark theme for waltscomicshop.com. Collects no data.",
-  "version": "2.5",
+  "version": "2.6",
   "icons": {
     "16": "icons/icon-16.png",
     "32": "icons/icon-32.png",
