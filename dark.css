@@ -147,6 +147,8 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 .single-issue-info-banner { background-color: var(--wd-surface) !important; }
 .single-issue-info { color: #ff8a65 !important; }
 #managecomics, .mc-page-header { background-color: var(--wd-surface) !important; color: var(--wd-text) !important; }
+/* The search results page reuses #managecomics as a plain wrapper. */
+body.snize-results-page #managecomics { background-color: transparent !important; }
 #MCText a { color: var(--wd-link) !important; }
 
 /* ---------- Homepage "Why fans trust" block ---------- */

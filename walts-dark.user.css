@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         Dark Mode for Walt's Comic Shop (unofficial)
 @namespace    github.com/jippi/dark-mode-for-walts-comics-shop
-@version      2.1.0
+@version      2.2.0
 @description  Unofficial dark theme for waltscomicshop.com. Collects no data.
 @author       Jippi (https://jippi.dev)
 @homepageURL  https://github.com/jippi/dark-mode-for-walts-comics-shop
@@ -158,6 +158,8 @@
   .single-issue-info-banner { background-color: var(--wd-surface) !important; }
   .single-issue-info { color: #ff8a65 !important; }
   #managecomics, .mc-page-header { background-color: var(--wd-surface) !important; color: var(--wd-text) !important; }
+  /* The search results page reuses #managecomics as a plain wrapper. */
+  body.snize-results-page #managecomics { background-color: transparent !important; }
   #MCText a { color: var(--wd-link) !important; }
 
   /* ---------- Homepage "Why fans trust" block ---------- */
