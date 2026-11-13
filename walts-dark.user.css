@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         Dark Mode for Walt's Comic Shop (unofficial)
 @namespace    github.com/jippi/dark-mode-for-walts-comics-shop
-@version      2.2.0
+@version      2.3.0
 @description  Unofficial dark theme for waltscomicshop.com. Collects no data.
 @author       Jippi (https://jippi.dev)
 @homepageURL  https://github.com/jippi/dark-mode-for-walts-comics-shop
@@ -187,6 +187,18 @@
     background: var(--wd-surface-2) !important;
     color: var(--wd-heading) !important;
   }
+  /* The shop forces these hearts to #000 with two ids and !important, so outrank it. */
+  html body #snize_results #snize-search-results-grid-mode li.snize-product button.swym-button.swym-add-to-wishlist-view-product::after,
+  html body #snize_results #snize-search-results-list-mode li.snize-product button.swym-button.swym-add-to-wishlist-view-product::after,
+  html body .snize-ac-results button.swym-button.swym-add-to-wishlist-view-product::after { color: var(--wd-heading) !important; }
+  html body #snize_results #snize-search-results-grid-mode li.snize-product button.swym-button.swym-add-to-wishlist-view-product.swym-added::after,
+  html body #snize_results #snize-search-results-list-mode li.snize-product button.swym-button.swym-add-to-wishlist-view-product.swym-added::after,
+  html body .snize-ac-results button.swym-button.swym-add-to-wishlist-view-product.swym-added::after { color: var(--wd-yellow) !important; }
+  html body #snize_results li.snize-product button.swym-button.swym-add-to-wishlist-view-product,
+  html body .snize-ac-results button.swym-button.swym-add-to-wishlist-view-product {
+    background: var(--wd-surface-2) !important;
+    color: var(--wd-heading) !important;
+  }
   .swym-ui-component .swym-wishlist-grid .swym-wishlist-item .swym-delete-btn,
   .swym-ui-component span.swym-auto-wishlists-close-icon { background: var(--wd-surface-2) !important; }
   .swym-ui-component .swym-auto-wishlist-notification,
@@ -325,6 +337,113 @@
   div.snize div.snize-main-panel-view-mode svg path[class*="-view-border"] { fill: var(--wd-border-strong) !important; }
   div.snize .snize-button, #snize-modal-product-quick-view .snize-button,
   #snize-modal-mobile-filters-dialog button.snize-product-filters-show-products { color: var(--wd-ink) !important; }
+
+  /* Searchanise results: loading states */
+  div.snize div.disabled-opacity { background-color: var(--wd-bg) !important; }
+  #snize_skeleton_results .snize-skeleton-card { border-color: var(--wd-border) !important; }
+  #snize_skeleton_results .snize-skeleton-text,
+  #snize_skeleton_results li.snize-skeleton-product .snize-skeleton-thumbnail-wrapper .snize-skeleton-thumbnail { background: var(--wd-surface-3) !important; }
+
+  /* Searchanise results: sort and filter dropdowns */
+  div.snize div.snize-main-panel-dropdown ul.snize-main-panel-dropdown-content,
+  div.snize div.snize-filters-dropdown-content,
+  #snize-modal-mobile-sortby-dialog, #snize-modal-mobile-sortby-dialog .snize-modal-content-wrapper {
+    background-color: var(--wd-surface-2) !important;
+    border-color: var(--wd-border-strong) !important;
+    box-shadow: var(--wd-shadow) !important;
+  }
+  div.snize div.snize-main-panel-dropdown ul.snize-main-panel-dropdown-content a,
+  #snize-modal-mobile-sortby-dialog ul.snize-main-panel-dropdown-content li a { color: var(--wd-text) !important; }
+  div.snize div.snize-main-panel-dropdown ul.snize-main-panel-dropdown-content a.current,
+  #snize-modal-mobile-sortby-dialog ul.snize-main-panel-dropdown-content li a.current { color: var(--wd-heading) !important; }
+  div.snize div.snize-filters-dropdown-title { background-color: var(--wd-surface) !important; }
+  div.snize div.snize-filters-dropdown-title.active { background-color: var(--wd-surface-3) !important; }
+
+  /* Searchanise results: filter controls */
+  div.snize-search-results .snize-filter-input, div.snize-filters-drawer .snize-filter-input, div.snize-modal-content .snize-filter-input,
+  div.snize input[type=text].snize-product-filters-search-field, div.snize .snize-price-range input.snize-price-range-input,
+  div.snize .snize-simple-options-box .snize-option-selector-wrapper select {
+    background-color: var(--wd-surface-2) !important;
+    border-color: var(--wd-border-strong) !important;
+    color: var(--wd-heading) !important;
+  }
+  div.snize-search-results .snize-filter-input:focus-visible, div.snize-filters-drawer .snize-filter-input:focus-visible,
+  div.snize-modal-content .snize-filter-input:focus-visible, div.snize input[type=text].snize-product-filters-search-field:focus,
+  div.snize input.snize-price-range-input:focus { border-color: var(--wd-yellow) !important; }
+  div.snize ul.snize-product-filters-list li .snize-filter-checkbox span {
+    background: var(--wd-surface-2) !important;
+    box-shadow: 0 0 0 1px var(--wd-border-strong) !important;
+  }
+  div.snize ul.snize-product-filters-list li:hover .snize-filter-checkbox span { box-shadow: 0 0 0 1px var(--wd-muted) !important; }
+  div.snize ul.snize-product-filters-list li .snize-filter-checkbox span:after { border-color: var(--wd-yellow) !important; }
+  div.snize ul.snize-product-filters-list li.snize-filters-show-more div, div.snize ul.snize-product-size-filter li.snize-filters-show-more div,
+  div.snize ul.snize-product-color-filter li.snize-filters-show-more div,
+  div.snize ul.snize-product-size-filter li label .snize-size-filter-checkbox > span {
+    background: var(--wd-surface-2) !important;
+    border-color: var(--wd-border-strong) !important;
+    color: var(--wd-text) !important;
+  }
+  div.snize ul.snize-product-filters-list li.snize-filters-show-more div:hover, div.snize ul.snize-product-size-filter li.snize-filters-show-more div:hover,
+  div.snize ul.snize-product-color-filter li.snize-filters-show-more div:hover,
+  div.snize ul.snize-product-size-filter li .snize-size-filter-checkbox input[type=checkbox]:checked + span,
+  div.snize ul.snize-product-size-filter li:hover .snize-size-filter-checkbox input[type=checkbox] + span { border-color: var(--wd-yellow) !important; color: var(--wd-yellow) !important; }
+  div.snize ul.snize-product-filters-list li a.snize-product-filters-see-more { color: var(--wd-link) !important; border-color: var(--wd-border-strong) !important; }
+  div.snize ul.snize-product-color-filter li label .snize-color-filter-checkbox > span,
+  div.snize ul.snize-product-color-filter li label .snize-color-filter-checkbox > span:before { border-color: var(--wd-border-strong) !important; }
+  div.snize div.slider-container.snize-theme .back-bar { background-color: var(--wd-border-strong) !important; }
+  div.snize div.slider-container.snize-theme .scale span { border-color: var(--wd-border-strong) !important; }
+
+  /* Searchanise results: pagination and empty results */
+  div.snize div.snize-pagination ul li a.disabled:hover { background-color: transparent !important; }
+  div.snize div.snize-pagination a.snize-pagination-load-more { border-color: var(--wd-border-strong) !important; color: var(--wd-heading) !important; }
+  div.snize li.snize-no-products-found { background-color: var(--wd-surface) !important; border-color: var(--wd-border) !important; }
+  div.snize li.snize-no-products-found div.snize-no-products-found-text span { color: var(--wd-text) !important; }
+  div.snize li.snize-no-products-found div.snize-no-products-found-text span a { color: var(--wd-link) !important; }
+
+  /* Searchanise results: product card extras */
+  #snize-search-results-grid-mode span.snize-thumbnail { border-color: transparent !important; }
+  div.snize .snize-reviews .total-reviews, .snize-modal-content-wrapper .snize-reviews .total-reviews { color: var(--wd-muted) !important; }
+  div.snize .stars-container:before, .snize-modal-content-wrapper .stars-container:before { color: var(--wd-border-strong) !important; }
+  div.snize .snize-product .snize-size-select-box .snize-size:not(.snize-size-active) { color: var(--wd-text) !important; border-color: var(--wd-border-strong) !important; }
+  div.snize .snize-product .snize-size-select-box .snize-size-active { color: var(--wd-yellow) !important; }
+  div.snize .snize-product .snize-color-swatch > span, div.snize .snize-product .snize-color-swatch > span:before { border-color: var(--wd-border-strong) !important; }
+  div.snize .snize-product .snize-color-swatch ul.snize-product-color-list li,
+  div.snize .snize-product .snize-swatch-type-image .snize-color-swatch-load-all,
+  div.snize #snize-search-results-grid-mode li.snize-banner { color: var(--wd-text) !important; }
+  div.snize .snize-button.snize-out-of-stock-product-button { background-color: var(--wd-surface-3) !important; color: var(--wd-muted) !important; }
+
+  /* Searchanise results: filter drawer and branding strip */
+  div.snize.snize-filters-drawer, .snize-srw-show-brand { background: var(--wd-surface) !important; }
+  div.snize .snize-drawer-filters-drawer__heading { color: var(--wd-heading) !important; }
+  div.snize .snize-drawer-filters-button { border-color: var(--wd-border-strong) !important; }
+  .snize-srw-show-brand__body { color: var(--wd-muted) !important; }
+  .snize-drawer-overlay.open { background: rgba(0, 0, 0, 0.6) !important; }
+
+  /* Searchanise mobile sort and filter dialogs */
+  #snize-modal-mobile-sortby-dialog .snize-sortby-title, #snize-modal-mobile-sortby-dialog .snize-modal-content { color: var(--wd-heading) !important; }
+  #snize-modal-mobile-sortby-dialog ul.snize-main-panel-dropdown-content li,
+  #snize-modal-mobile-filters-dialog div.snize-product-filter-row,
+  #snize-modal-mobile-filters-dialog label { border-color: var(--wd-border) !important; }
+  #snize-modal-mobile-filters-dialog button.snize-product-filters-reset-all {
+    background: var(--wd-surface-2) !important;
+    border-color: var(--wd-border-strong) !important;
+  }
+  #snize-modal-mobile-sortby-dialog .snize-close-button, #snize-modal-mobile-filters-dialog .snize-close-button { filter: invert(1) !important; }
+
+  /* Searchanise recommendation rows */
+  .snize-recommendation .snize-recommendation-title { color: var(--wd-heading) !important; border-color: var(--wd-border) !important; }
+  div.snize-recommendation-results span.snize-title, div.snize-recommendation-results .snize-price-list { color: var(--wd-heading) !important; }
+  div.snize-recommendation-results .snize-reviews .total-reviews,
+  div.snize-recommendation-results .snize-color-swatch ul.snize-product-color-list li { color: var(--wd-muted) !important; }
+  div.snize-recommendation-results a.buttons .snize-recommendation-arrow { background-color: var(--wd-surface-3) !important; }
+  div.snize-recommendation-results a.buttons .snize-recommendation-arrow svg path { fill: var(--wd-heading) !important; }
+  .snize-recommendation .snize-simple-options-box .snize-option-selector-wrapper select,
+  .snize-recommendation .snize-product .snize-size-select-box .snize-size:not(.snize-size-active) {
+    background-color: var(--wd-surface-2) !important;
+    border-color: var(--wd-border-strong) !important;
+    color: var(--wd-text) !important;
+  }
+  .snize-recommendation .snize-button.snize-out-of-stock-product-button { background-color: var(--wd-surface-3) !important; color: var(--wd-muted) !important; }
 
   /* ---------- Toasts / misc app widgets ---------- */
   .cg-toast { background: var(--wd-surface-2) !important; color: var(--wd-heading) !important; box-shadow: var(--wd-shadow), inset 0 0 0 1px var(--wd-border-strong) !important; }
