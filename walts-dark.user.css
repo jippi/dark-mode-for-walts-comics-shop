@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         Dark Mode for Walt's Comic Shop (unofficial)
 @namespace    github.com/jippi/dark-mode-for-walts-comics-shop
-@version      2.3.0
+@version      2.4.0
 @description  Unofficial dark theme for waltscomicshop.com. Collects no data.
 @author       Jippi (https://jippi.dev)
 @homepageURL  https://github.com/jippi/dark-mode-for-walts-comics-shop
@@ -157,6 +157,8 @@
   .rrp-bubble.below::after, .wcs-tip.below::after { border-bottom-color: var(--wd-surface-2) !important; border-top-color: transparent !important; }
   .single-issue-info-banner { background-color: var(--wd-surface) !important; }
   .single-issue-info { color: #ff8a65 !important; }
+  /* The theme's link hover uses --accent-color, which equals the heading colour here, so give hover its own colour. */
+  .link:hover, .link:focus-visible { color: var(--wd-yellow) !important; }
   #managecomics, .mc-page-header { background-color: var(--wd-surface) !important; color: var(--wd-text) !important; }
   /* The search results page reuses #managecomics as a plain wrapper. */
   body.snize-results-page #managecomics { background-color: transparent !important; }
@@ -394,6 +396,19 @@
   div.snize div.slider-container.snize-theme .scale span { border-color: var(--wd-border-strong) !important; }
 
   /* Searchanise results: pagination and empty results */
+  #snize_results div.snize-pagination ul li a, #snize_results div.snize-pagination ul li span,
+  #snize_results div.snize-pagination a.snize-pagination-prev, #snize_results div.snize-pagination a.snize-pagination-next,
+  #snize_results div.snize-pagination span.snize-pagination-prev, #snize_results div.snize-pagination span.snize-pagination-next { color: var(--wd-text) !important; }
+  #snize_results div.snize-pagination ul li a:hover,
+  #snize_results div.snize-pagination a.snize-pagination-prev:hover, #snize_results div.snize-pagination a.snize-pagination-next:hover {
+    background: transparent !important;
+    color: var(--wd-yellow) !important;
+  }
+  #snize_results div.snize-pagination ul li a.active, #snize_results div.snize-pagination ul li a.active:hover {
+    background: var(--wd-yellow) !important;
+    color: var(--wd-ink) !important;
+  }
+  #snize_results div.snize-pagination ul li span.disabled, #snize_results div.snize-pagination ul li a.disabled { color: var(--wd-muted) !important; }
   div.snize div.snize-pagination ul li a.disabled:hover { background-color: transparent !important; }
   div.snize div.snize-pagination a.snize-pagination-load-more { border-color: var(--wd-border-strong) !important; color: var(--wd-heading) !important; }
   div.snize li.snize-no-products-found { background-color: var(--wd-surface) !important; border-color: var(--wd-border) !important; }
@@ -401,6 +416,9 @@
   div.snize li.snize-no-products-found div.snize-no-products-found-text span a { color: var(--wd-link) !important; }
 
   /* Searchanise results: product card extras */
+  #snize-search-results-grid-mode li.snize-product, #snize-search-results-list-mode li.snize-product,
+  div.snize li.snize-product a.snize-view-link,
+  div.snize div.snize-search-results-categories li.snize-category, div.snize div.snize-search-results-pages li.snize-page { color: var(--wd-text) !important; }
   #snize-search-results-grid-mode span.snize-thumbnail { border-color: transparent !important; }
   div.snize .snize-reviews .total-reviews, .snize-modal-content-wrapper .snize-reviews .total-reviews { color: var(--wd-muted) !important; }
   div.snize .stars-container:before, .snize-modal-content-wrapper .stars-container:before { color: var(--wd-border-strong) !important; }

@@ -68,9 +68,21 @@ js = f"""// ==UserScript==
     GM_addStyle(css);
     return;
   }}
-  const style = document.createElement("style");
-  style.textContent = css;
-  (document.head || document.documentElement).appendChild(style);
+  const add = () => {{
+    const style = document.createElement("style");
+    style.textContent = css;
+    (document.head || document.documentElement).appendChild(style);
+  }};
+  // At document-start the root element may not exist yet.
+  if (document.documentElement) {{
+    add();
+    return;
+  }}
+  new MutationObserver((_, observer) => {{
+    if (!document.documentElement) return;
+    observer.disconnect();
+    add();
+  }}).observe(document, {{ childList: true }});
 }})();
 """
 open("walts-dark.user.js", "w").write(js)
